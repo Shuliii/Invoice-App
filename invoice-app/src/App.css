@@ -1,0 +1,16 @@
+:root {
+  --primary: #7c5dfa;
+  --secondary: #9277ff;
+  --header-bg: #373b53;
+  --primary-bg: #f8f8f8;
+}
+
+:root.dark {
+  --header-bg: #1e2139;
+  --primary-bg: #141625;
+}
+
+body {
+  background: var(--primary-bg);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}

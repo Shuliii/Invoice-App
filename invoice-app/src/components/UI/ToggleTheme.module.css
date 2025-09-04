@@ -1,0 +1,5 @@
+.themeToggle {
+  background: var(--header-bg);
+  border: 0;
+  cursor: pointer;
+}
