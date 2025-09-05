@@ -5,6 +5,10 @@
   --primary-bg: #f8f8f8;
   --primary-text: #0c0e16;
   --secondary-text: #888eb0;
+  --primary-invoice-bg: #fff;
+
+  --name: #858bb2;
+  --due-date: #7e88c3;
 }
 
 :root.dark {
@@ -12,7 +16,10 @@
   --primary-bg: #141625;
   --primary-text: #fff;
   --secondary-text: #dfe3fa;
+  --primary-invoice-bg: #1e2139;
 
+  --name: #fff;
+  --due-date: #dfe3fa;
 }
 
 body {

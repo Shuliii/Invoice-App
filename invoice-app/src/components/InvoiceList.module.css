@@ -1,0 +1,100 @@
+.InvoiceList {
+  margin-top: 32px;
+}
+
+.container {
+  max-width: 327px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.empty__container {
+  margin-top: clamp(
+    102px,
+    calc(102px + (209 - 102) * (100vw - 375px) / (768 - 375)),
+    209px
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(
+    42px,
+    calc(42px + (66 - 42) * (100vw - 375px) / (768 - 375)),
+    66px
+  );
+}
+
+.empty__container > img {
+  width: clamp(
+    193.07px,
+    calc(193.07px + (241.34 - 193.07) * (100vw - 375px) / (768 - 375)),
+    241.34px
+  );
+  height: clamp(
+    160px,
+    calc(160px + (200 - 160) * (100vw - 375px) / (768 - 375)),
+    200px
+  );
+}
+
+.textbox {
+  max-width: 206px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  text-align: center;
+}
+
+.textbox > h2 {
+  color: var(--primary-text);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.75px;
+}
+
+.textbox > p {
+  color: var(--secondary-text);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: -0.1px;
+  padding-inline: 14.5px 15.5px;
+}
+
+.textbox > p > span {
+  font-weight: 700;
+}
+
+.invoice {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: clamp(
+      672px,
+      calc(672px + (730 - 672) * ((100vw - 768px) / (1024 - 768))),
+      730px
+    );
+  }
+
+  .empty__container {
+    margin-top: clamp(
+      170px,
+      calc(209px - (209 - 170) * (100vw - 768px) / (1024 - 768)),
+      209px
+    );
+  }
+
+  .textbox > p {
+    padding-inline: 6.5px;
+  }
+
+  .invoice {
+    display: inline;
+  }
+}

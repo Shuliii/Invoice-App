@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import {useEffect} from "react";
 import "./App.css";
 import Header from "./components/Header";
-import InvoiceToolBar from "./components/InvoiceToolBar";
+
+import InvoicePage from "./components/InvoicePage";
 
 function App() {
   useEffect(() => {
@@ -12,7 +13,7 @@ function App() {
     <div className="app">
       <Header />
       <main>
-        <InvoiceToolBar />
+        <InvoicePage />
       </main>
     </div>
   );
