@@ -66,3 +66,72 @@
   left: -24px;
   top: -20px;
 }
+
+@media (min-width: 768px) {
+  .logo__container {
+    height: 80px;
+    width: 80px;
+  }
+
+  .logo__container::after {
+    height: 40px;
+    width: 80px;
+  }
+
+  .profile::before {
+    top: -24px;
+    left: -32px;
+    height: 80px;
+  }
+
+  .actions {
+    gap: 65px;
+    margin-right: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .header {
+    border-radius: 0 20px 20px 0;
+    height: 100dvh;
+  }
+
+  .container {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+  } 
+
+  .logo__container {
+    height: 103px;
+    width: 103px;
+  }
+
+  .logo__container::after {
+    height: 51.5px;
+    width: 103px;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 57px;
+    margin-right: 0px;
+    margin-bottom: 24px;
+  }
+
+  .profile__picture {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile::before {
+    height: 1px;
+    width: 103px;
+    left: -31px;
+    top: -24px;
+  }
+}

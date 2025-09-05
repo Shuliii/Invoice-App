@@ -3,14 +3,33 @@
   --secondary: #9277ff;
   --header-bg: #373b53;
   --primary-bg: #f8f8f8;
+  --primary-text: #0c0e16;
+  --secondary-text: #888eb0;
 }
 
 :root.dark {
   --header-bg: #1e2139;
   --primary-bg: #141625;
+  --primary-text: #fff;
+  --secondary-text: #dfe3fa;
+
 }
 
 body {
   background: var(--primary-bg);
   transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.app {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+@media (min-width: 1024px) {
+  .app {
+    grid-template-columns: 103px 1fr;
+    grid-template-rows: 1fr;
+  }
 }

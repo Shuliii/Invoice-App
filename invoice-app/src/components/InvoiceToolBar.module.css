@@ -1,0 +1,92 @@
+.InvoiceToolBar {
+  margin-top: clamp(32px, calc(32px + 0.0738 * (100vw - 375px)), 61px);
+}
+
+.container {
+  max-width: clamp(327px, calc(327px + 0.878 * (100vw - 375px)), 672px);
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container__left {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3px, calc(3px + (6 - 3) * ((100vw - 375px) / (768 - 375))), 6px);
+}
+
+.container__left > h1 {
+  color: var(--primary-text);
+  font-weight: 700;
+  font-size: clamp(
+    24px,
+    calc(24px + (36 - 24) * ((100vw - 375px) / (768 - 375))),
+    36px
+  );
+  letter-spacing: -0.75px;
+}
+
+.container__left > p {
+  color: var(--secondary-text);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: -0.1px;
+}
+
+.container__right {
+  display: flex;
+  gap: clamp(
+    18.54px,
+    calc(18.54px + (40.54 - 18.54) * ((100vw - 375px) / (768 - 375))),
+    40.54px
+  );
+}
+
+.filter {
+  display: flex;
+  gap: clamp(
+    12px,
+    calc(12px + (14 - 12) * ((100vw - 375px) / (768 - 375))),
+    14px
+  );
+  align-items: center;
+}
+
+.filter > h2 {
+  color: var(--primary-text);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+}
+
+.filter > img {
+  width: 8.46px;
+  height: 4.23px;
+}
+
+.textFull {
+  display: none;
+}
+
+.textShort {
+  display: inline;
+}
+
+@media (min-width: 768px) {
+  .InvoiceToolBar {
+    margin-top: clamp(61px, calc(61px + 0.0625 * (100vw - 768px)), 77px);
+  }
+  .container {
+    max-width: clamp(672px, calc(672px + 0.22656 * (100vw - 768px)), 730px);
+  }
+
+  .textFull {
+    display: inline;
+  }
+
+  .textShort {
+    display: none;
+  }
+}
