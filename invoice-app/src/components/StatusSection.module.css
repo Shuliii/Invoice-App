@@ -1,0 +1,31 @@
+.StatusSection {
+  margin-top: 31px;
+}
+
+.container {
+  max-width: clamp(
+    327px,
+    calc(327px + (688 - 327) * (100vw - 375px) / (768 - 375)),
+    688px
+  );
+  margin-inline: auto;
+}
+
+.Status__inner {
+  display: flex;
+  padding-block: 24px 27px;
+  padding-inline: 24px;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary-invoice-bg);
+  box-shadow: 0 10px 10px -10px rgba(72, 84, 159, 0.1);
+  border-radius: 8px;
+}
+
+.Status__inner > p {
+  color: var(--status);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: -0.1px;
+}

@@ -1,8 +1,11 @@
 import {useEffect} from "react";
+import {Routes, Route} from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 
-import InvoicePage from "./components/InvoicePage";
+import InvoicePage from "./components/Pages/InvoicePage";
+
+import InvoiceDetailPage from "./components/Pages/InvoiceDetailPage";
 
 function App() {
   useEffect(() => {
@@ -13,7 +16,10 @@ function App() {
     <div className="app">
       <Header />
       <main>
-        <InvoicePage />
+        <Routes>
+          <Route path="/" element={<InvoicePage />} />
+          <Route path="/invoice/:id" element={<InvoiceDetailPage />} />
+        </Routes>
       </main>
     </div>
   );

@@ -6,7 +6,7 @@ const Status = ({children}) => {
   return (
     <div className={`${styles.status} ${styles[capitalizedId]}`}>
       <div className={`${styles.circle} ${styles[helper]}`}></div>
-      {children}
+      {capitalizedId}
     </div>
   );
 };

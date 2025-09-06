@@ -6,6 +6,7 @@
   padding: 25px 24px 22px 24px;
   border-radius: 8px;
   box-shadow: 0 10px 10px -10px rgba(72, 84, 159, 0.1);
+  text-decoration: none;
 }
 
 .invoice__id {
@@ -68,8 +69,8 @@
   .InvoiceCard {
     display: grid;
     grid-template-columns:
-      auto 28px auto 51px auto 82px auto 40px auto
-      20px auto;
+      60px 28px 94px 51px auto auto auto 40px 104px
+      20px 4px;
     grid-template-rows: 1fr;
     padding: 16px 24px 16px 24px;
     align-items: center;
@@ -93,6 +94,7 @@
   .total {
     grid-column: 7;
     grid-row: 1;
+    justify-self: end;
   }
 
   .InvoiceCard > :last-child {

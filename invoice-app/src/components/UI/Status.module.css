@@ -29,7 +29,7 @@
 }
 
 .circle__Draft {
-  background: rgba(55, 59, 83);
+  background: var(--draft);
 }
 
 .Paid {
@@ -43,6 +43,6 @@
 }
 
 .Draft {
-  background: rgba(55, 59, 83, 0.0571);
-  color: rgba(55, 59, 83);
+  background: var(--draft-bg);
+  color: var(--draft);
 }

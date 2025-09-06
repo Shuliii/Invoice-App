@@ -1,5 +1,5 @@
-import InvoiceToolBar from "./InvoiceToolBar";
-import InvoiceList from "./InvoiceList";
+import InvoiceToolBar from "../InvoiceToolBar";
+import InvoiceList from "../InvoiceList";
 const InvoicePage = () => {
   return (
     <>

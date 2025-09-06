@@ -1,12 +1,12 @@
 import styles from "./InvoiceList.module.css";
 import InvoiceCard from "./InvoiceCard";
 
-import Data from "./Data/Data.json";
+import {getInvoices} from "./Data/Invoices";
 
 import Empty from "../assets/illustration-empty.svg";
 
 const InvoiceList = () => {
-  console.log(Data);
+  const Data = getInvoices();
   let InvoiceListHelper = "";
   if (!Data) {
     InvoiceListHelper = (

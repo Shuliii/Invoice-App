@@ -9,6 +9,9 @@
 
   --name: #858bb2;
   --due-date: #7e88c3;
+  --draft: #373b53;
+  --draft-bg: rgba(55, 59, 83, 0.0571);
+  --status: #858bb2;
 }
 
 :root.dark {
@@ -20,6 +23,9 @@
 
   --name: #fff;
   --due-date: #dfe3fa;
+  --draft: #dfe3fa;
+  --draft-bg: rgba(223, 227, 250, 0.0571);
+  --status: #dfe3fa;
 }
 
 body {
