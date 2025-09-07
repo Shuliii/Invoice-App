@@ -1,0 +1,31 @@
+.InvoiceItem {
+  background: var(--buton4-bg);
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 10px 10px -10px rgba(72, 84, 159, 0.1);
+  padding: 24px;
+}
+
+.header,
+.quantity,
+.price {
+  display: none;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+}
+
+.row__container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.total {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  justify-self: end;
+}

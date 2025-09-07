@@ -12,6 +12,7 @@
   --draft: #373b53;
   --draft-bg: rgba(55, 59, 83, 0.0571);
   --status: #858bb2;
+  --buton4-bg: #f9fafe;
 }
 
 :root.dark {
@@ -26,6 +27,7 @@
   --draft: #dfe3fa;
   --draft-bg: rgba(223, 227, 250, 0.0571);
   --status: #dfe3fa;
+  --buton4-bg: #252945;
 }
 
 body {

@@ -25,16 +25,14 @@ const InvoiceList = () => {
   } else {
     InvoiceListHelper = Data.map((item) => {
       return (
-        <>
-          <InvoiceCard
-            id={item.id}
-            clientName={item.clientName}
-            paymentDue={item.paymentDue}
-            total={item.total}
-            status={item.status}
-            key={item.id}
-          ></InvoiceCard>
-        </>
+        <InvoiceCard
+          id={item.id}
+          clientName={item.clientName}
+          paymentDue={item.paymentDue}
+          total={item.total}
+          status={item.status}
+          key={item.id}
+        ></InvoiceCard>
       );
     });
   }

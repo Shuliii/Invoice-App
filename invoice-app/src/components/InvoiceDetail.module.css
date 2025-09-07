@@ -1,0 +1,174 @@
+.InvoiceDetail {
+  margin-top: 16px;
+}
+
+.container {
+  max-width: 327px;
+  margin-inline: auto;
+}
+
+.InvoiceDetail__inner {
+  background: var(--primary-invoice-bg);
+  padding-block: 25px 24px;
+  padding-inline: 24px;
+  border-radius: 8px;
+  box-shadow: 0 10px 10px -10px rgba(72, 84, 159, 0.1);
+}
+
+.firstSection {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.id__section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.id__section h2 {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: clamp(
+    15px,
+    calc(15px + (24 - 15) * ((100vw - 375px) / (768 - 375))),
+    24px
+  );
+  letter-spacing: -0.25px;
+  color: var(--primary-text);
+}
+
+.id__section span {
+  color: #7e88c3;
+}
+
+.id__section p,
+.invoiceDate p,
+.paymentDue p,
+.email p {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: -0.1px;
+  color: var(--due-date);
+}
+
+.senderAddress {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  color: var(--due-date);
+}
+
+.secondSection {
+  margin-top: 31px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.secondSection h2 {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.25px;
+  color: var(--primary-text);
+}
+.invoiceDate {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.paymentDue {
+  grid-column: 1;
+  margin-top: 31px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.email {
+  grid-column: 1;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.clientAddress {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.billTo {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  color: var(--due-date);
+}
+
+.clientAddress > p {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  color: var(--due-date);
+}
+
+.clientAddress > h2 {
+  margin-top: 13px;
+  margin-bottom: 7px;
+  color: var(--primary-text);
+}
+
+.thirdSection {
+  margin-top: clamp(
+    38px,
+    calc(38px + (47 - 38) * ((100vw - 375px) / (768 - 375))),
+    47px
+  );
+}
+
+@media (min-width: 768px) {
+  .InvoiceDetail {
+    margin-top: 24px;
+  }
+
+  .container {
+    max-width: clamp(
+      688px,
+      calc(688px + (730 - 688) * ((100vw - 768px) / (1024 - 768))),
+      730px
+    );
+  }
+
+  .InvoiceDetail__inner {
+    padding: clamp(
+      32px,
+      calc(32px + (48 - 32) * ((100vw - 768px) / (1024 - 768))),
+      48px
+    );
+  }
+
+  .firstSection {
+    flex-direction: row;
+    gap: 0px;
+    justify-content: space-between;
+  }
+
+  .secondSection {
+    margin-top: 21px;
+    max-width: 524px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .email {
+    grid-column: 3;
+    grid-row: 1;
+    margin-top: 0px;
+  }
+  .clientAddress {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}
