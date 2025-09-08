@@ -1,7 +1,7 @@
 import styles from "./InvoiceDetail.module.css";
 import InvoiceItem from "./InvoiceItem";
 
-const InvoiceDetail = ({invoice}) => {
+const InvoiceDetail = ({ invoice }) => {
   return (
     <section className={styles.InvoiceDetail}>
       <div className={styles.container}>
@@ -44,7 +44,7 @@ const InvoiceDetail = ({invoice}) => {
             </div>
           </div>
           <div className={styles.thirdSection}>
-            <InvoiceItem items={invoice.items} />
+            <InvoiceItem items={invoice.items} total={invoice.total} />
           </div>
         </div>
       </div>

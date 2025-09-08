@@ -1,0 +1,22 @@
+.InvoiceFooter {
+  margin-top: 56px;
+  background: var(--primary-invoice-bg);
+  box-shadow: 0 10px 10px -10px rgba(72, 84, 159, 0.1);
+}
+
+.container {
+  max-width: 375px;
+  margin-inline: auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 21px 22px;
+  padding-inline: 24px;
+}
+
+@media (min-width: 768px) {
+  .InvoiceFooter {
+    display: none;
+  }
+}
