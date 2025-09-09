@@ -1,14 +1,11 @@
 import BackNavigation from "../BackNavigation";
+import Modal from "../UI/Modal";
 
 const InvoiceEditPage = () => {
   return (
-    <div>
+    <Modal>
       <BackNavigation />
-      this is edit page
-      <backdrop>
-        <moda></moda>
-      </backdrop>
-    </div>
+    </Modal>
   );
 };
 
