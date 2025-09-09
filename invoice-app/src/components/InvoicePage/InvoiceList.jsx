@@ -1,9 +1,9 @@
 import styles from "./InvoiceList.module.css";
-import InvoiceCard from "./InvoiceCard";
+import InvoiceCard from "../InvoiceCard";
 
-import {getInvoices} from "./Data/Invoices";
+import { getInvoices } from "../Data/Invoices";
 
-import Empty from "../assets/illustration-empty.svg";
+import Empty from "../../assets/illustration-empty.svg";
 
 const InvoiceList = () => {
   const Data = getInvoices();

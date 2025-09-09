@@ -1,0 +1,43 @@
+.container {
+  max-width: 327px;
+  margin-inline: auto;
+  margin-top: 22px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+}
+
+.bill__from__form {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 23px;
+  row-gap: 25px;
+}
+
+.bill__from__form label {
+  display: flex; /* stack label text + input */
+  flex-direction: column;
+  gap: 9px;
+}
+
+.street__address {
+  grid-column: 1 / -1;
+}
+
+.bill__from__form label:last-child {
+  grid-column: 1 / -1; /* 🔑 span both columns */
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 504px;
+    margin-top: 46px;
+  }
+}

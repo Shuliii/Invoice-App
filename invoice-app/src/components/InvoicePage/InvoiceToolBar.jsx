@@ -1,6 +1,6 @@
-import PrimaryButton from "./UI/PrimaryButton";
+import PrimaryButton from "../UI/PrimaryButton";
 import styles from "./InvoiceToolBar.module.css";
-import ArrowDown from "../assets/icon-arrow-down.svg";
+import ArrowDown from "../../assets/icon-arrow-down.svg";
 
 const InvoiceToolBar = () => {
   return (

@@ -1,0 +1,29 @@
+.backNavigation__container {
+  max-width: clamp(
+    327px,
+    calc(327px + (504 - 327) * (100vw - 375px) / (768 - 375)),
+    504px
+  );
+  margin-inline: auto;
+}
+
+.container {
+  max-width: 327px;
+  margin-inline: auto;
+}
+
+.header {
+  margin-top: 26px;
+}
+
+@media (min-width: 768px) {
+  .backNavigation__container {
+    display: none;
+  }
+  .container {
+    max-width: 504px;
+  }
+  .header {
+    margin-top: 59px;
+  }
+}

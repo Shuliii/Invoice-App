@@ -1,5 +1,5 @@
 import styles from "./InvoiceDetail.module.css";
-import InvoiceItem from "./InvoiceItem";
+import InvoiceItem from "../InvoiceItem";
 
 const InvoiceDetail = ({ invoice }) => {
   return (

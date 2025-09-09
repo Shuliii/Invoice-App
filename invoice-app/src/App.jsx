@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 
@@ -8,6 +8,8 @@ import InvoiceDetailPage from "./components/Pages/InvoiceDetailPage";
 import InvoiceEditPage from "./components/Pages/InvoiceEditPage";
 
 function App() {
+  const location = useLocation();
+  const state = location.state && location.state.backgroundLocation;
   useEffect(() => {
     document.documentElement.classList.remove("theme--boot");
   }, []);
@@ -16,11 +18,17 @@ function App() {
     <div className="app">
       <Header />
       <main>
-        <Routes>
+        <Routes location={state || location}>
           <Route path="/" element={<InvoicePage />} />
           <Route path="/invoice/:id" element={<InvoiceDetailPage />} />
           <Route path="/invoice/:id/edit" element={<InvoiceEditPage />} />
         </Routes>
+
+        {state && (
+          <Routes>
+            <Route path="/invoice/:id/edit" element={<InvoiceEditPage />} />
+          </Routes>
+        )}
       </main>
     </div>
   );

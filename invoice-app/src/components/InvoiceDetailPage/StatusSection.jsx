@@ -1,15 +1,18 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import styles from "./StatusSection.module.css";
-import Status from "./UI/Status";
-import Button2 from "./UI/Button2";
-import Button3 from "./UI/Button3";
-import Button4 from "./UI/Button4";
+import Status from "../UI/Status";
+import Button2 from "../UI/Button2";
+import Button3 from "../UI/Button3";
+import Button4 from "../UI/Button4";
 
 const StatusSection = ({ invoice }) => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { id } = useParams();
   const handleEdit = () => {
-    navigate(`/invoice/${id}/edit`);
+    navigate(`/invoice/${id}/edit`, {
+      state: { backgroundLocation: location },
+    });
   };
   return (
     <div className={styles.StatusSection}>

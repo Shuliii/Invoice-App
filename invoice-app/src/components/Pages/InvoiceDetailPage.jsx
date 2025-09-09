@@ -1,6 +1,6 @@
 import BackNavigation from "../BackNavigation";
-import StatusSection from "../StatusSection";
-import InvoiceDetail from "../InvoiceDetail";
+import StatusSection from "../InvoiceDetailPage/StatusSection";
+import InvoiceDetail from "../InvoiceDetailPage/InvoiceDetail";
 import InvoiceFooter from "../InvoiceFooter";
 import { useParams } from "react-router-dom";
 import { getInvoiceById } from "../Data/Invoices";
