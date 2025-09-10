@@ -9,35 +9,128 @@ fieldset {
   padding: 0;
   margin: 0;
 }
-
-legend {
+.bill__from,
+.bill__to {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+  color: var(--primary);
 }
 
-.bill__from__form {
-  margin-top: 25px;
+.bill__from__form,
+.bill__to__form {
+  margin-top: 24px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 23px;
   row-gap: 25px;
 }
 
-.bill__from__form label {
-  display: flex; /* stack label text + input */
+.bill__from__form label,
+.bill__to__form label,
+.date__form label {
+  display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 8px;
 }
 
-.street__address {
+.bill__from__form label:first-child,
+.bill__from__form label:last-child {
+  grid-column: 1 / -1; /* 🔑 span both columns */
+}
+
+.bill__from__form label span,
+.bill__to__form label span,
+.date__form label span {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: -0.1px;
+  color: var(--subline);
+}
+
+.bill__from__form label input,
+.bill__to__form label input,
+.date__form label input,
+.date__form label select {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+  color: var(--primary-text);
+  width: 100%;
+  background: var(--primary-invoice-bg);
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: var(--border);
+  padding-block: 18px 15px;
+  padding-left: 20px;
+}
+
+fieldset:nth-of-type(2),
+fieldset:nth-of-type(3) {
+  margin-top: 41px;
+}
+
+.bill__to__form label:nth-of-type(1),
+.bill__to__form label:nth-of-type(2),
+.bill__to__form label:nth-of-type(3),
+.bill__to__form label:nth-of-type(6) {
   grid-column: 1 / -1;
 }
 
-.bill__from__form label:last-child {
-  grid-column: 1 / -1; /* 🔑 span both columns */
+.date__form label {
+  grid-column: 1/-1;
+}
+
+.date__form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 25px;
+}
+
+.date__form label:nth-of-type(1) {
+  position: relative;
+}
+
+.date__form label:nth-of-type(1) img {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
 }
 
 @media (min-width: 768px) {
   .container {
     max-width: 504px;
     margin-top: 46px;
+  }
+
+  .bill__from__form,
+  .bill__to__form {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 25px;
+  }
+  .bill__from__form label:last-child {
+    grid-column: 3;
+  }
+  .bill__to__form label:nth-of-type(6) {
+    grid-column: 3;
+  }
+
+  .date__form {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+  }
+
+  .date__form label:nth-of-type(1) {
+    grid-column: 1;
+  }
+
+  .date__form label:nth-of-type(2) {
+    grid-column: 2;
   }
 }

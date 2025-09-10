@@ -16,6 +16,7 @@
   --subline: #7e88c3;
   --invoice-total-bg: #373b53;
   --edit-bg: #fff;
+  --border: #dfe3fa;
 }
 
 :root.dark {
@@ -34,6 +35,7 @@
   --subline: #888eb0;
   --invoice-total-bg: #0c0e16;
   --edit-bg: #141625;
+  --border: #252945;
 }
 
 body {
