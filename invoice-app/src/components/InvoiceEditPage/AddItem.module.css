@@ -1,0 +1,81 @@
+fieldset {
+  margin-top: 69px;
+}
+
+legend {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.38px;
+  color: #777f98;
+}
+
+.addItem__form {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 64px 100px 1fr;
+  row-gap: 25px;
+  column-gap: 16px;
+}
+
+.addItem__form label,
+.total {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.addItem__form label:first-child {
+  grid-column: 1 / -1;
+  gap: 15px;
+}
+
+.addItem__form label span,
+.total span {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: -0.1px;
+  color: var(--subline);
+}
+
+.addItem__form label input {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+  color: var(--primary-text);
+  width: 100%;
+  background: var(--primary-invoice-bg);
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: var(--border);
+  padding-block: 18px 15px;
+  padding-left: 20px;
+}
+
+.total {
+  position: relative;
+}
+
+.total output {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+  color: #888eb0;
+  padding-block: 18px 15px;
+}
+
+.total button {
+  position: absolute;
+  right: 7.56px;
+  bottom: 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.button {
+  width: 100%;
+  margin-top: 48px;
+}

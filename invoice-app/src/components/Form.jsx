@@ -1,9 +1,9 @@
 import styles from "./Form.module.css";
-import {useState} from "react";
+import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import CalendarIcon from "../assets/icon-calendar.svg";
-import AddItem from "../InvoiceEditPage/AddItem";
+import AddItem from "./InvoiceEditPage/AddItem";
 
 const Form = () => {
   const [date, setDate] = useState(new Date());
@@ -114,7 +114,7 @@ const Form = () => {
             </label>
           </div>
         </fieldset>
-        {/* <AddItem /> */}
+        <AddItem />
       </form>
     </div>
   );
