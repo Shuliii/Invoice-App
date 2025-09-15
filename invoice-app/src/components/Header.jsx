@@ -1,8 +1,8 @@
+import {Link} from "react-router-dom";
 import ToggleTheme from "./UI/ToggleTheme";
 import style from "./Header.module.css";
 
 import Logo from "../assets/logo.svg";
-import Moon from "../assets/icon-moon.svg";
 
 import Profile from "../assets/image-avatar.jpg";
 
@@ -11,7 +11,9 @@ const Header = () => {
     <header className={style.header}>
       <div className={style.container}>
         <div className={style.logo__container}>
-          <img className={style.logo} src={Logo} alt="Logo" />
+          <Link to="/">
+            <img className={style.logo} src={Logo} alt="Logo" />
+          </Link>
         </div>
         <div className={style.actions}>
           <ToggleTheme />
