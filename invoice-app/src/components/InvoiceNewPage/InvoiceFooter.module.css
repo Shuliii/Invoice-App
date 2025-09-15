@@ -1,0 +1,43 @@
+.InvoiceFooter {
+  margin-top: 88px;
+}
+
+.container {
+  max-width: 375px;
+  margin-inline: auto;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 21px 22px;
+  padding-inline: 22px;
+}
+
+.button4 {
+  padding-inline: 18px 19px !important;
+}
+.button5 {
+  padding-inline: 16.11px 13.89px !important;
+}
+
+.button2 {
+  padding-inline: 16px 15px !important;
+}
+
+@media (min-width: 768px) {
+  .InvoiceFooter {
+    margin-top: 47px;
+  }
+
+  .container {
+    padding-inline: 0;
+    padding-block: 0;
+    max-width: 504px;
+    padding-bottom: 32px;
+    justify-content: end;
+    gap: 8xp;
+  }
+  .button4 {
+    margin-right: auto;
+  }
+}

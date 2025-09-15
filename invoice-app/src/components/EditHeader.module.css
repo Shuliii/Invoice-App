@@ -16,6 +16,18 @@
   margin-top: 26px;
 }
 
+.header h3 {
+  color: var(--primary-text);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+}
+
+.header h3 span {
+  color: var(--hash);
+}
+
 @media (min-width: 768px) {
   .backNavigation__container {
     display: none;

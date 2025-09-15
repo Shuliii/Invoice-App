@@ -1,0 +1,10 @@
+.InvoiceFooter {
+  background: var(--primary-invoice-bg);
+  box-shadow: 0 10px 10px -10px rgba(72, 84, 159, 0.1);
+}
+
+@media (min-width: 768px) {
+  .InvoiceFooter {
+    background: none;
+  }
+}

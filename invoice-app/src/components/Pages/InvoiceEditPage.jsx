@@ -3,6 +3,7 @@ import Modal from "../UI/Modal";
 import {getInvoiceById} from "../Data/Invoices";
 import {useParams} from "react-router-dom";
 import Form from "../Form";
+import InvoiceFooter from "../InvoiceEditPage/InvoiceFooter";
 
 const InvoiceEditPage = () => {
   const {id} = useParams();
@@ -11,6 +12,7 @@ const InvoiceEditPage = () => {
     <Modal>
       <EditHeader invoice={invoice} />
       <Form />
+      <InvoiceFooter />
     </Modal>
   );
 };

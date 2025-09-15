@@ -1,13 +1,13 @@
 import styles from "./AddItem.module.css";
-import { useState } from "react";
+import {useState} from "react";
 import Button4 from "../UI/Button4";
 import Delete from "../../assets/icon-delete.svg";
 
 const AddItem = () => {
-  const [items, setItems] = useState([{ id: 1, name: "", qty: 1, price: 0 }]);
+  const [items, setItems] = useState([{id: 1, name: "", qty: 1, price: 0}]);
 
   const addItem = () => {
-    setItems([...items, { id: Date.now(), name: "", qty: 1, price: 0 }]);
+    setItems([...items, {id: Date.now(), name: "", qty: 1, price: 0}]);
   };
 
   const removeItem = (id) => {
@@ -16,10 +16,9 @@ const AddItem = () => {
 
   const updateItem = (id, field, value) => {
     setItems(
-      items.map((item) => (item.id === id ? { ...item, [field]: value } : item))
+      items.map((item) => (item.id === id ? {...item, [field]: value} : item))
     );
   };
-  console.log(items);
   const helper = items.map((item) => (
     <div className={styles.addItem__form} key={item.id}>
       <label>
@@ -61,7 +60,7 @@ const AddItem = () => {
     </div>
   ));
   return (
-    <fieldset>
+    <fieldset className={styles.fieldset}>
       <legend className={styles.bill__to}>Item List</legend>
       {helper}
       <Button4 onClick={addItem} type="button" className={styles.button}>

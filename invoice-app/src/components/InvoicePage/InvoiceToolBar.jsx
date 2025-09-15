@@ -1,8 +1,16 @@
 import PrimaryButton from "../UI/PrimaryButton";
 import styles from "./InvoiceToolBar.module.css";
 import ArrowDown from "../../assets/icon-arrow-down.svg";
+import {useNavigate, useLocation} from "react-router-dom";
 
 const InvoiceToolBar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const newHandler = () => {
+    navigate(`/invoice/new`, {
+      state: {backgroundLocation: location},
+    });
+  };
   return (
     <div className={styles.InvoiceToolBar}>
       <div className={styles.container}>
@@ -18,7 +26,7 @@ const InvoiceToolBar = () => {
             </h2>
             <img src={ArrowDown} alt="arrow" />
           </div>
-          <PrimaryButton>
+          <PrimaryButton onClick={newHandler}>
             <span className={styles.textFull}>New Invoice</span>
             <span className={styles.textShort}>New</span>
           </PrimaryButton>

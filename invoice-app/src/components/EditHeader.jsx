@@ -1,7 +1,9 @@
 import styles from "./EditHeader.module.css";
 import BackNavigation from "./BackNavigation";
+import {useParams} from "react-router-dom";
 
-const EditHeader = ({ invoice }) => {
+const EditHeader = () => {
+  const {id} = useParams();
   return (
     <div className={styles.EditHeader}>
       <div className={styles.backNavigation__container}>
@@ -9,10 +11,14 @@ const EditHeader = ({ invoice }) => {
       </div>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h3>
-            Edit <span>#</span>
-            {invoice.id}
-          </h3>
+          {id ? (
+            <h3>
+              Edit <span>#</span>
+              {id}
+            </h3>
+          ) : (
+            <h3>New Invoice</h3>
+          )}
         </div>
       </div>
     </div>

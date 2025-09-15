@@ -1,5 +1,5 @@
 import styles from "./Form.module.css";
-import { useState } from "react";
+import {useState} from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import CalendarIcon from "../assets/icon-calendar.svg";

@@ -17,6 +17,7 @@
   --invoice-total-bg: #373b53;
   --edit-bg: #fff;
   --border: #dfe3fa;
+  --hash: #888eb0;
 }
 
 :root.dark {
@@ -36,6 +37,7 @@
   --invoice-total-bg: #0c0e16;
   --edit-bg: #141625;
   --border: #252945;
+  --hash: #777f98;
 }
 
 body {
