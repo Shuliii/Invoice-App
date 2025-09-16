@@ -1,11 +1,11 @@
 import styles from "./Form.module.css";
-import {useState} from "react";
+import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import CalendarIcon from "../assets/icon-calendar.svg";
 import AddItem from "./InvoiceEditPage/AddItem";
 
-const Form = () => {
+const Form = ({ invoice }) => {
   const [date, setDate] = useState(new Date());
   return (
     <div className={styles.container}>
@@ -20,6 +20,7 @@ const Form = () => {
                 name="street-address"
                 id="street-address"
                 required
+                defaultValue={invoice ? invoice.clientAddress.street : ""}
               />
             </label>
             <label>

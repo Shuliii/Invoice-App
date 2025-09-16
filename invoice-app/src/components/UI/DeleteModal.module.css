@@ -1,0 +1,72 @@
+.backdrop {
+  z-index: 1000;
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  max-width: clamp(
+    327px,
+    calc(327px + (480 - 327) * (100vw - 375px) / (768 - 375)),
+    480px
+  );
+
+  background: var(--primary-invoice-bg);
+  border-radius: 8px;
+  box-shadow: 0 10px 10px -10px rgba(72, 84, 159, 0.1);
+  padding-inline: clamp(
+    32px,
+    calc(32px + (48 - 32) * (100vw - 375px) / (768 - 375)),
+    48px
+  );
+  padding-top: clamp(
+    34px,
+    calc(34px + (51 - 34) * (100vw - 375px) / (768 - 375)),
+    51px
+  );
+  padding-bottom: clamp(
+    32px,
+    calc(32px + (48 - 32) * (100vw - 375px) / (768 - 375)),
+    48px
+  );
+
+  display: flex;
+  flex-direction: column;
+  gap: clamp(
+    14px,
+    calc(22px + (14 - 22) * (100vw - 375px) / (768 - 375)),
+    22px
+  );
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, calc(8px + (12 - 8) * (100vw - 375px) / (768 - 375)), 12px);
+}
+
+.text h1 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  color: var(--primary-text);
+}
+
+.text p {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: -0.14px;
+  color: #888eb0;
+}
+
+.buttons__container {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}

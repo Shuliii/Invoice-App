@@ -79,3 +79,18 @@ legend {
   width: 100%;
   margin-top: 48px;
 }
+
+@media (min-width: 768px) {
+  .addItem__form {
+    grid-template-columns: 214px 46px 100px 1fr;
+    gap: 16px;
+  }
+
+  .addItem__form label,
+  .total {
+    gap: 15px;
+  }
+  .addItem__form label:nth-of-type(1) {
+    grid-column: 1;
+  }
+}
