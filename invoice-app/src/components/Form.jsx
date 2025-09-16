@@ -1,11 +1,11 @@
 import styles from "./Form.module.css";
-import { useState } from "react";
+import {useState} from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import CalendarIcon from "../assets/icon-calendar.svg";
 import AddItem from "./InvoiceEditPage/AddItem";
 
-const Form = ({ invoice }) => {
+const Form = ({invoice}) => {
   const [date, setDate] = useState(new Date());
   return (
     <div className={styles.container}>
@@ -20,22 +20,40 @@ const Form = ({ invoice }) => {
                 name="street-address"
                 id="street-address"
                 required
-                defaultValue={invoice ? invoice.clientAddress.street : ""}
+                defaultValue={invoice ? invoice.senderAddress.street : ""}
               />
             </label>
             <label>
               <span>City</span>
-              <input type="text" name="city" id="city" required />
+              <input
+                type="text"
+                name="city"
+                id="city"
+                required
+                defaultValue={invoice ? invoice.senderAddress.city : ""}
+              />
             </label>
 
             <label>
               <span>Post Code</span>
-              <input type="text" name="post-code" id="post-code" required />
+              <input
+                type="text"
+                name="post-code"
+                id="post-code"
+                required
+                defaultValue={invoice ? invoice.senderAddress.postCode : ""}
+              />
             </label>
 
             <label>
               <span>Country</span>
-              <input type="text" name="country" id="country" required />
+              <input
+                type="text"
+                name="country"
+                id="country"
+                required
+                defaultValue={invoice ? invoice.senderAddress.country : ""}
+              />
             </label>
           </div>
         </fieldset>
@@ -45,7 +63,13 @@ const Form = ({ invoice }) => {
           <div className={styles.bill__to__form}>
             <label>
               <span>Client's Name</span>
-              <input type="text" name="client-name" id="client-name" required />
+              <input
+                type="text"
+                name="client-name"
+                id="client-name"
+                required
+                defaultValue={invoice ? invoice.clientName : ""}
+              />
             </label>
             <label>
               <span>Client'S Email</span>
@@ -54,6 +78,7 @@ const Form = ({ invoice }) => {
                 name="client-email"
                 id="client-email"
                 required
+                defaultValue={invoice ? invoice.clientEmail : ""}
               />
             </label>
             <label>
@@ -63,20 +88,39 @@ const Form = ({ invoice }) => {
                 name="street-address"
                 id="street-address"
                 required
+                defaultValue={invoice ? invoice.clientAddress.street : ""}
               />
             </label>
             <label>
               <span>City</span>
-              <input type="text" name="city" id="city" required />
+              <input
+                type="text"
+                name="city"
+                id="city"
+                required
+                defaultValue={invoice ? invoice.clientAddress.city : ""}
+              />
             </label>
             <label>
               <span>Post Code</span>
-              <input type="text" name="post-code" id="post-code" required />
+              <input
+                type="text"
+                name="post-code"
+                id="post-code"
+                required
+                defaultValue={invoice ? invoice.clientAddress.postCode : ""}
+              />
             </label>
 
             <label>
               <span>Country</span>
-              <input type="text" name="country" id="country" required />
+              <input
+                type="text"
+                name="country"
+                id="country"
+                required
+                defaultValue={invoice ? invoice.clientAddress.country : ""}
+              />
             </label>
           </div>
         </fieldset>
@@ -111,11 +155,12 @@ const Form = ({ invoice }) => {
                 name="project-description"
                 id="project-description"
                 required
+                defaultValue={invoice ? invoice.description : ""}
               />
             </label>
           </div>
         </fieldset>
-        <AddItem />
+        <AddItem invoice={invoice} />
       </form>
     </div>
   );

@@ -1,14 +1,16 @@
 import styles from "./InvoiceList.module.css";
 import InvoiceCard from "../InvoiceCard";
 
-import { getInvoices } from "../Data/Invoices";
+import {getInvoices} from "../Data/Invoices";
+import {useState} from "react";
 
 import Empty from "../../assets/illustration-empty.svg";
 
 const InvoiceList = () => {
-  const Data = getInvoices();
+  const [Data, setData] = useState(getInvoices());
+  // const Data = getInvoices();
   let InvoiceListHelper = "";
-  if (!Data) {
+  if (!Data || Data.length === 0) {
     InvoiceListHelper = (
       <div className={styles.empty__container}>
         <img src={Empty} alt="empty illustration image" />
