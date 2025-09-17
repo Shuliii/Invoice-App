@@ -8,7 +8,7 @@ import Empty from "../../assets/illustration-empty.svg";
 
 const InvoiceList = () => {
   const [Data, setData] = useState(getInvoices());
-  // const Data = getInvoices();
+  console.log(Data);
   let InvoiceListHelper = "";
   if (!Data || Data.length === 0) {
     InvoiceListHelper = (

@@ -1,6 +1,7 @@
 import styles from "./InvoiceItem.module.css";
 
-const InvoiceItem = ({ items, total }) => {
+const InvoiceItem = ({items, total}) => {
+  console.log(items);
   const helper = items.map((item, i) => {
     return (
       <div key={item.name} className={styles.row}>

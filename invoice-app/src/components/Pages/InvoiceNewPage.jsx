@@ -7,8 +7,8 @@ const InvoiceNewPage = () => {
   return (
     <Modal>
       <EditHeader />
-      <Form />
-      <InvoiceFooter />
+      <Form id="invoice-form" />
+      <InvoiceFooter form="invoice-form" />
     </Modal>
   );
 };
