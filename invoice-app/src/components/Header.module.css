@@ -69,6 +69,11 @@
 }
 
 @media (min-width: 768px) {
+  .header {
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
   .logo__container {
     height: 80px;
     width: 80px;

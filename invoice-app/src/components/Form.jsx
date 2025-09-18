@@ -1,17 +1,17 @@
 import styles from "./Form.module.css";
-import {useState} from "react";
-import {format, addDays} from "date-fns";
-import {addInvoice, updateInvoice} from "./Data/Invoices";
+import { useState } from "react";
+import { format, addDays } from "date-fns";
+import { addInvoice, updateInvoice } from "./Data/Invoices";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import CalendarIcon from "../assets/icon-calendar.svg";
 import AddItem from "./InvoiceEditPage/AddItem";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // A blank invoice template for "New Invoice"
 const blankInvoice = {
-  senderAddress: {street: "", city: "", postCode: "", country: ""},
-  clientAddress: {street: "", city: "", postCode: "", country: ""},
+  senderAddress: { street: "", city: "", postCode: "", country: "" },
+  clientAddress: { street: "", city: "", postCode: "", country: "" },
   clientName: "",
   clientEmail: "",
   createdAt: "",
@@ -21,7 +21,7 @@ const blankInvoice = {
   items: [],
 };
 
-const Form = ({invoice, id}) => {
+const Form = ({ invoice, id }) => {
   // Seed form state: use invoice (edit mode) or blank (new mode)
   const [formData, setFormData] = useState(invoice || blankInvoice);
   const [date, setDate] = useState(invoice?.createdAt || null);
@@ -31,14 +31,14 @@ const Form = ({invoice, id}) => {
   const updateSender = (field, value) => {
     setFormData((prev) => ({
       ...prev,
-      senderAddress: {...prev.senderAddress, [field]: value},
+      senderAddress: { ...prev.senderAddress, [field]: value },
     }));
   };
 
   const updateClient = (field, value) => {
     setFormData((prev) => ({
       ...prev,
-      clientAddress: {...prev.clientAddress, [field]: value},
+      clientAddress: { ...prev.clientAddress, [field]: value },
     }));
   };
 
@@ -65,17 +65,16 @@ const Form = ({invoice, id}) => {
     };
 
     if (action === "draft") {
-      newInvoice = {...newInvoice, status: "draft"};
+      newInvoice = { ...newInvoice, status: "draft" };
       addInvoice(newInvoice);
     }
 
     if (action === "send") {
-      newInvoice = {...newInvoice, status: "pending"};
+      newInvoice = { ...newInvoice, status: "pending" };
       addInvoice(newInvoice);
     }
 
     if (action === "save") {
-      console.log("save");
       updateInvoice(newInvoice);
     }
 

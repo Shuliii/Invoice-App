@@ -1,31 +1,37 @@
 import styles from "./AddItem.module.css";
 import Button4 from "../UI/Button4";
 import Delete from "../../assets/icon-delete.svg";
-
-const AddItem = ({formData, setFormData}) => {
-  // --- Ensure at least one item exists ---
+import { useEffect } from "react";
+const AddItem = ({ formData, setFormData }) => {
+  // useEffect(() => {
+  //   if (!formData.items || formData.items.length === 0) {
+  //     setFormData((prev) => ({
+  //       ...prev,
+  //       items: [{ id: Date.now(), name: "", quantity: 1, price: 0, total: 0 }],
+  //     }));
+  //   } else {
+  //     setFormData((prev) => ({
+  //       ...prev,
+  //       items: prev.items.map((item, idx) => ({
+  //         ...item,
+  //         id: item.id || Date.now() + idx,
+  //       })),
+  //     }));
+  //   }
+  // }, [formData.items, setFormData]);
   if (!formData.items || formData.items.length === 0) {
     setFormData((prev) => ({
       ...prev,
-      items: [
-        {
-          id: Date.now(),
-          name: "",
-          quantity: 1,
-          price: 0,
-          total: 0,
-        },
-      ],
+      items: [{ id: Date.now(), name: "", quantity: 1, price: 0, total: 0 }],
     }));
   }
-
   // --- Add a new empty item ---
   const addItem = () => {
     setFormData((prev) => ({
       ...prev,
       items: [
         ...prev.items,
-        {id: Date.now(), name: "", quantity: 1, price: 0, total: 0},
+        { id: Date.now(), name: "", quantity: 1, price: 0, total: 0 },
       ],
     }));
   };
