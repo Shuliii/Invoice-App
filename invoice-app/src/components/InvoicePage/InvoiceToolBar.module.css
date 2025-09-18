@@ -51,6 +51,7 @@
     14px
   );
   align-items: center;
+  position: relative;
 }
 
 .filter > h2 {
@@ -64,6 +65,34 @@
 .filter > img {
   width: 8.46px;
   height: 4.23px;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: var(--dropdown-bg);
+  border-radius: 8px;
+  box-shadow: 0 10px 10px -10px rgba(72, 84, 159, 0.1);
+  padding-left: 24px;
+  padding-block: 24px;
+
+  position: absolute;
+  top: 100%;
+  left: -37px;
+  width: 192px;
+}
+
+.dropdown label {
+  color: var(--primary-text);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+
+  display: flex;
+  gap: 13px;
+  align-items: center;
 }
 
 .textFull {

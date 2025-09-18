@@ -80,7 +80,6 @@ const Form = ({ invoice, id }) => {
 
     Navigate("/");
   };
-  console.log(formData);
   // --- Render ---
   return (
     <div className={styles.container}>

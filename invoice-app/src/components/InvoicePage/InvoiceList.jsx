@@ -1,13 +1,13 @@
 import styles from "./InvoiceList.module.css";
 import InvoiceCard from "../InvoiceCard";
 
-import {getInvoices} from "../Data/Invoices";
-import {useState} from "react";
+import { getInvoices } from "../Data/Invoices";
+import { useState } from "react";
 
 import Empty from "../../assets/illustration-empty.svg";
 
-const InvoiceList = () => {
-  const [Data, setData] = useState(getInvoices());
+const InvoiceList = ({ Data }) => {
+  // const [Data, setData] = useState(getInvoices());
   console.log(Data);
   let InvoiceListHelper = "";
   if (!Data || Data.length === 0) {

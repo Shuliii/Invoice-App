@@ -3,28 +3,34 @@ import Button4 from "../UI/Button4";
 import Delete from "../../assets/icon-delete.svg";
 import { useEffect } from "react";
 const AddItem = ({ formData, setFormData }) => {
-  // useEffect(() => {
-  //   if (!formData.items || formData.items.length === 0) {
-  //     setFormData((prev) => ({
-  //       ...prev,
-  //       items: [{ id: Date.now(), name: "", quantity: 1, price: 0, total: 0 }],
-  //     }));
-  //   } else {
-  //     setFormData((prev) => ({
-  //       ...prev,
-  //       items: prev.items.map((item, idx) => ({
-  //         ...item,
-  //         id: item.id || Date.now() + idx,
-  //       })),
-  //     }));
-  //   }
-  // }, [formData.items, setFormData]);
-  if (!formData.items || formData.items.length === 0) {
-    setFormData((prev) => ({
-      ...prev,
-      items: [{ id: Date.now(), name: "", quantity: 1, price: 0, total: 0 }],
-    }));
-  }
+  useEffect(() => {
+    // ensure every item has an ID
+    if (formData.items && formData.items.length > 0) {
+      setFormData((prev) => ({
+        ...prev,
+        items: prev.items.map((item, idx) => ({
+          ...item,
+          id: item.id || Date.now() + idx,
+        })),
+      }));
+    }
+
+    // ensure at least one item exists
+    if (!formData.items || formData.items.length === 0) {
+      setFormData((prev) => ({
+        ...prev,
+        items: [
+          {
+            id: Date.now(),
+            name: "",
+            quantity: 1,
+            price: 0,
+            total: 0,
+          },
+        ],
+      }));
+    }
+  }, []);
   // --- Add a new empty item ---
   const addItem = () => {
     setFormData((prev) => ({
@@ -72,8 +78,8 @@ const AddItem = ({ formData, setFormData }) => {
     <fieldset className={styles.fieldset}>
       <legend className={styles.bill__to}>Item List</legend>
 
-      {formData.items.map((item) => (
-        <div className={styles.addItem__form} key={item.id}>
+      {formData.items.map((item, idx) => (
+        <div className={styles.addItem__form} key={item.id || idx}>
           <label>
             <span>Item Name</span>
             <input

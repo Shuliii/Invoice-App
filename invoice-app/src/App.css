@@ -18,6 +18,7 @@
   --edit-bg: #fff;
   --border: #dfe3fa;
   --hash: #888eb0;
+  --dropdown-bg: #fff;
 }
 
 :root.dark {
@@ -38,6 +39,7 @@
   --edit-bg: #141625;
   --border: #252945;
   --hash: #777f98;
+  --dropdown-bg: #252945;
 }
 
 body {
